@@ -12,9 +12,23 @@
 */
 
 Route::get('/', function () {
+    /*
+    $banco = "(DESCRIPTION=(ADDRESS = (PROTOCOL = TCP)(HOST=192.168.60.131)(PORT=1521))(CONNECT_DATA=(SID=orcl)))";
+
+    $conn = oci_connect('hr', 'oracle', $banco);
+
+    if ($conn) {
+        print "Connected to Oracle!";
+    }
+    */
     return view('welcome');
 });
 
-Auth::routes();
+Route::group(['middleware' => 'auth'], function () {
+    //    Route::get('/link1', function ()    {
+//        // Uses Auth Middleware
+//    });
 
-Route::get('/home', 'HomeController@index');
+    //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
+    #adminlte_routes
+});

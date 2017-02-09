@@ -9,8 +9,7 @@
 <div id="app">
     <div class="wrapper">
     @include('layouts.partials.menu')
-        <!-- Content Wrapper. Contains page content -->
-        <div class="container">
+        <div class="container"><!-- Content Wrapper. Contains page content -->
             @include('layouts.partials.contentheader')
             <!-- Main content -->
             <section class="content">
@@ -29,7 +28,9 @@
                 @show
             </section><!-- /.content -->
         </div><!-- /.content-wrapper -->
-    </div>
+
+        @include('layouts.partials.footer')
+    </div><!-- ./wrapper -->
 </div><!--/#app -->
 
 <!-- Bootstrap core JavaScript

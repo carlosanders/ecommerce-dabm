@@ -178,9 +178,12 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         /*
-         * Acacha AdminLTE template provider
+         * Package Service Providers...
         */
+        //Acacha AdminLTE template provider
         Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
+        //laravel-module
+        Nwidart\Modules\LaravelModulesServiceProvider::class,
 
     ],
 
@@ -232,9 +235,11 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         /*
-        * Acacha AdminLTE template alias
+        * Package Service Aliases...
         */
+        //Acacha AdminLTE template alias
         'AdminLTE' => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
+        'Module' => Nwidart\Modules\Facades\Module::class,
 
     ],
 

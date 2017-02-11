@@ -184,9 +184,7 @@ return [
         Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
         //laravel-module
         Nwidart\Modules\LaravelModulesServiceProvider::class,
-        //laravel-debugbar
-        //Barryvdh\Debugbar\ServiceProvider::class,
-        //Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Yajra\Oci8\Oci8ServiceProvider::class,
 
     ],
 

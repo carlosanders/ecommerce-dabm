@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', 'Site\SiteController@index');
+
+//Route::get('/', function () {
     /*
     $banco = "(DESCRIPTION=(ADDRESS = (PROTOCOL = TCP)(HOST=192.168.60.131)(PORT=1521))(CONNECT_DATA=(SID=orcl)))";
 
@@ -21,8 +23,9 @@ Route::get('/', function () {
         print "Connected to Oracle!";
     }
     */
-    return view('welcome');
-});
+ //   Debugbar::warning('Watch out…');
+//    return view('welcome');
+//});
 
 Route::group(['middleware' => 'auth'], function () {
     //    Route::get('/link1', function ()    {

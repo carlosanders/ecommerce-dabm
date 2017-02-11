@@ -17,7 +17,9 @@
                 @section('main-content')
                     <div class="row">
                         <!-- Categorias -->
-                        @include('layouts.partials.category')
+                        @section('category')
+                            @include('layouts.partials.category')
+                        @show
                         <div class="col-md-9">
                             <!-- Fotos de Produtos em carousel -->
                             @include('layouts.partials.carousel')

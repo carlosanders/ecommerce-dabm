@@ -184,6 +184,9 @@ return [
         Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
         //laravel-module
         Nwidart\Modules\LaravelModulesServiceProvider::class,
+        //laravel-debugbar
+        //Barryvdh\Debugbar\ServiceProvider::class,
+        //Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
     ],
 
@@ -240,6 +243,7 @@ return [
         //Acacha AdminLTE template alias
         'AdminLTE' => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
         'Module' => Nwidart\Modules\Facades\Module::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
     ],
 

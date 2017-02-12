@@ -6,9 +6,7 @@
     <title>@yield('htmlheader_title', 'Your title here')</title>
 
     <!-- Custom styles for this template -->
-    {{--<link href="{{ asset('/css/all-landing.css') }}" rel="stylesheet">--}}
-    <link href="{{ asset('/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('/vendor/bootstrap/css/shop-homepage.css') }}" rel="stylesheet">
+    <link href="{{ asset('/vendor/bootstrap/css/site-all.css') }}" rel="stylesheet">
 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet'
           type='text/css'>

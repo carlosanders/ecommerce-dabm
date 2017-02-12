@@ -21,3 +21,4 @@ packages/
 node_modules/
 .DS_Store
 .env
+bower_components/

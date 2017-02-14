@@ -1,4 +1,17 @@
 /* CSS Especifico do E-commerce */
+
+// Mixin itself
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
 footer {
   margin: 25px 0;
 }

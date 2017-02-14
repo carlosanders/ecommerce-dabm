@@ -7,17 +7,10 @@
                 <h4><a href="#">First Product</a>
                 </h4>
                 <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
-            </div>
-            <div class="ratings">
-                <p class="pull-right">15 reviews</p>
-                <p>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                </p>
-            </div>
+                <div class="clearfix">
+                    <a href="#" class="btn btn-default pull-right" role="button">Link Button</a>
+                </div>
+            </div> <!-- caption -->
         </div>
     </div>
 

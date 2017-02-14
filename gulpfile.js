@@ -1,43 +1,36 @@
 const gulp = require('gulp');
 const shell = require('gulp-shell');
 const elixir = require('laravel-elixir');
-var bowerDir = 'bower_components/';
+var bowerDir = './bower_components/';
 require('laravel-elixir-vue-2');
 
 
 elixir(function(mix) {
 
-    //compila site.less
     mix.less('site.less',
-             'public/common/css/site.css')
-       .less('vendor.less',
-             //compiled bootstrap and font-awesome
-             'public/vendor/bootstrap/css/vendor.css');
+        'public/common/css/site.css')
+        .less('vendor.less',
+            //compiled bootstrap and font-awesome
+            'public/common/css/vendor.css');
 
     //copia todos os css dentro do site.css
     mix.combine([
-        //'public/vendor/bootstrap/css/bootstrap.css',
-        'public/vendor/bootstrap/css/vendor.css',
+        'public/common/css/vendor.css',
         'public/vendor/bootstrap/css/shop-homepage.css',
-        'public/vendor/bootstrap/css/site.css',
+        'public/common/css/site.css',
     ], 'public/common/css/site-all.css');
 
     //copiar as fontes de vendors utilizadas no projetos
     mix.copy(bowerDir + 'bootstrap/fonts', 'public/common/fonts')
        .copy(bowerDir + 'font-awesome/fonts', 'public/common/fonts');
 
-    // mix.scripts([
-    //   './node_modules/jquery/dist/jquery.js',
-    //   './node_modules/bootstrap/dist/js/bootstrap.js',
-    // ], 'public/vendor/js/vendor.js');
-    mix.js([
+    mix.scripts([
         bowerDir + 'jquery/dist/jquery.js',
         bowerDir + 'bootstrap/dist/js/bootstrap.js',
-    ], 'public/common/js/vendor.js').sourceMaps();
+    ], 'public/common/js/vendor.js');
 
 
-/*
-    //copias para o Admin-lte
+    //copy to Admin-lte
     mix.sass('app.scss')
         //Landing page
         .less('./node_modules/bootstrap-less/bootstrap/bootstrap.less',
@@ -68,7 +61,8 @@ elixir(function(mix) {
         .copy('node_modules/admin-lte/plugins','public/plugins')
         .copy('node_modules/icheck/skins/square/blue.png','public/css')
         .copy('node_modules/icheck/skins/square/blue@2x.png','public/css');
-*/
+
+
         //.webpack('app.js');
 
 });

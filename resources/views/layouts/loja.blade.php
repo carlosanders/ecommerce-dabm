@@ -24,7 +24,9 @@
                             <!-- Fotos de Produtos em carousel -->
                             @include('layouts.partials.carousel')
                             <!-- thumbnail de Produtos -->
-                            @include('layouts.partials.thumbnail')
+                            @section('produto')
+                                @include('layouts.partials.thumbnail')
+                            @show
                         </div>
                     </div>
                 @show

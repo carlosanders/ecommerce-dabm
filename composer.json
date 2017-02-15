@@ -10,7 +10,8 @@
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "nwidart/laravel-modules": "^1.16",
-        "yajra/laravel-oci8": "^5.4"
+        "yajra/laravel-oci8": "^5.4",
+        "filp/whoops": "^2.1"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^2.3",

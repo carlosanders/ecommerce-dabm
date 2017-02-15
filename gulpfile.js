@@ -29,7 +29,7 @@ elixir(function(mix) {
         bowerDir + 'bootstrap/dist/js/bootstrap.js',
     ], 'public/common/js/vendor.js');
 
-
+/*
     //copy to Admin-lte
     mix.sass('app.scss')
         //Landing page
@@ -62,7 +62,7 @@ elixir(function(mix) {
         .copy('node_modules/icheck/skins/square/blue.png','public/css')
         .copy('node_modules/icheck/skins/square/blue@2x.png','public/css');
 
-
+*/
         //.webpack('app.js');
 
 });

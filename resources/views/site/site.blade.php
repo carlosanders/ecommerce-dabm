@@ -15,3 +15,7 @@
 @section('category')
     @include('site.partials.category')
 @endsection
+
+@section('produto')
+    @include('site.partials.thumbnail')
+@endsection

@@ -19,6 +19,7 @@ class Product extends Model
         'value',
         'qtd',
         'url',
+        'pg_init'
     ];
 
     public function setUrlAttribute($value = '')

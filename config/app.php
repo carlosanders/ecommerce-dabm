@@ -185,6 +185,8 @@ return [
         //laravel-module
         Nwidart\Modules\LaravelModulesServiceProvider::class,
         Yajra\Oci8\Oci8ServiceProvider::class,
+        Laravelista\Ekko\EkkoServiceProvider::class,
+        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
 
     ],
 
@@ -242,6 +244,8 @@ return [
         'AdminLTE' => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
         'Module' => Nwidart\Modules\Facades\Module::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Ekko' => Laravelista\Ekko\Facades\Ekko::class,
+        'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
 
     ],
 

@@ -12,6 +12,23 @@
 */
 
 Route::get('/', 'Site\SiteController@index');
+Route::get('/all', 'Site\SiteController@getProductsAll');
+
+Route::resource('shop', 'Site\SiteController', ['only' => ['index', 'show']]);
+Route::resource('cart', 'Site\CartController',
+    ['only' =>[
+        'index',
+        'store',
+        'destroy'
+    ]]);
+Route::get('cart/{id}', 'Site\CartController@update');
+Route::post('switchToWishlist/{id}', 'Site\CartController@switchToWishlist');
+Route::delete('emptyCart', 'Site\CartController@emptyCart');
+Route::resource('wishlist', 'Site\WishlistController');
+Route::delete('emptyWishlist', 'Site\WishlistController@emptyWishlist');
+Route::post('switchToCart/{id}', 'Site\WishlistController@switchToCart');
+
+
 
 //Route::get('/', function () {
     /*

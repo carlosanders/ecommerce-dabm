@@ -10,7 +10,9 @@
     <div class="wrapper">
     @include('layouts.partials.menu')
         <div class="container"><!-- Content Wrapper. Contains page content -->
-            @include('layouts.partials.contentheader')
+            @section('contentheader')
+                @include('layouts.partials.contentheader')
+            @show
             <!-- Main content -->
             <section class="content">
                 <!-- Your Page Content Here -->
@@ -22,7 +24,9 @@
                         @show
                         <div class="col-md-9">
                             <!-- Fotos de Produtos em carousel -->
-                            @include('layouts.partials.carousel')
+                            @section('carousel')
+                                @include('layouts.partials.carousel')
+                            @show
                             <!-- thumbnail de Produtos -->
                             @section('produto')
                                 @include('layouts.partials.thumbnail')
@@ -43,6 +47,9 @@
 @section('scripts')
     @include('layouts.partials.scripts')
 @show
+
+<!-- Arquivos extras de JS -->
+@yield('extra-js')
 
 </body>
 </html>

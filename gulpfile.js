@@ -1,28 +1,47 @@
+const gulp = require('gulp');
+const shell = require('gulp-shell');
 const elixir = require('laravel-elixir');
-
+var bowerDir = './bower_components/';
 require('laravel-elixir-vue-2');
 
-/*
- |--------------------------------------------------------------------------
- | Elixir Asset Management
- |--------------------------------------------------------------------------
- |
- | Elixir provides a clean, fluent API for defining some basic Gulp tasks
- | for your Laravel application. By default, we are compiling the Less
- | file for our application, as well as publishing vendor resources.
- |
- */
 
 elixir(function(mix) {
+
+    mix.less('site.less',
+        'public/common/css/site.css')
+        .less('vendor.less',
+            //compiled bootstrap and font-awesome
+            'public/common/css/vendor.css');
+
+    //copia todos os css dentro do site.css
+    mix.combine([
+        'public/common/css/vendor.css',
+        'public/vendor/bootstrap/css/shop-homepage.css',
+        'public/common/css/site.css',
+    ], 'public/common/css/site-all.css');
+
+    //copiar as fontes de vendors utilizadas no projetos
+    mix.copy(bowerDir + 'bootstrap/fonts', 'public/common/fonts')
+       .copy(bowerDir + 'font-awesome/fonts', 'public/common/fonts');
+
+    mix.scripts([
+        bowerDir + 'jquery/dist/jquery.js',
+        bowerDir + 'bootstrap/dist/js/bootstrap.js',
+    ], 'public/common/js/vendor.js');
+
+/*
+    //copy to Admin-lte
     mix.sass('app.scss')
         //Landing page
-        .less('./node_modules/bootstrap-less/bootstrap/bootstrap.less', './public/css/bootstrap.css')
+        .less('./node_modules/bootstrap-less/bootstrap/bootstrap.less',
+            './public/css/bootstrap.css')
         .styles([
             './public/css/bootstrap.css',
             'main.css'
         ], 'public/css/all-landing.css')
         //AdminLTE
-        .less('./node_modules/admin-lte/build/less/AdminLTE.less', './public/css/adminlte-less.css')
+        .less('./node_modules/admin-lte/build/less/AdminLTE.less',
+            './public/css/adminlte-less.css')
         .less('adminlte-app.less')
         .less('./node_modules/toastr/toastr.less')
         .styles([
@@ -41,6 +60,9 @@ elixir(function(mix) {
         .copy('node_modules/admin-lte/dist/img','public/img')
         .copy('node_modules/admin-lte/plugins','public/plugins')
         .copy('node_modules/icheck/skins/square/blue.png','public/css')
-        .copy('node_modules/icheck/skins/square/blue@2x.png','public/css')
-        .webpack('app.js');
+        .copy('node_modules/icheck/skins/square/blue@2x.png','public/css');
+
+*/
+        //.webpack('app.js');
+
 });

@@ -114,7 +114,7 @@
         </table>
 
         <a href="{{ url('/shop') }}" class="btn btn-primary btn-lg">Continue Comprando</a> &nbsp;
-        <a href="#" class="btn btn-success btn-lg">
+        <a href="{{ url('/checkout') }}" class="btn btn-success btn-lg">
             <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i> Finlizar Compra</a>
 
         <div style="float:right">

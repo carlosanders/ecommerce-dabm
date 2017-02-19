@@ -11,9 +11,18 @@
 |
 */
 
+//diversos
+Route::get('routes', function() {
+    \Artisan::call('route:list');
+    return "<pre>".\Artisan::output();
+});
 Route::get('/', 'Site\SiteController@index');
 Route::get('/all', 'Site\SiteController@getProductsAll');
 
+Route::prefix('');
+
+
+//rotas para gerir carrinho na sessao
 Route::resource('shop', 'Site\SiteController', ['only' => ['index', 'show']]);
 Route::resource('cart', 'Site\CartController',
     ['only' =>[
@@ -28,22 +37,7 @@ Route::resource('wishlist', 'Site\WishlistController');
 Route::delete('emptyWishlist', 'Site\WishlistController@emptyWishlist');
 Route::post('switchToCart/{id}', 'Site\WishlistController@switchToCart');
 
-
-
-//Route::get('/', function () {
-    /*
-    $banco = "(DESCRIPTION=(ADDRESS = (PROTOCOL = TCP)(HOST=192.168.60.131)(PORT=1521))(CONNECT_DATA=(SID=orcl)))";
-
-    $conn = oci_connect('hr', 'oracle', $banco);
-
-    if ($conn) {
-        print "Connected to Oracle!";
-    }
-    */
- //   Debugbar::warning('Watch out…');
-//    return view('welcome');
-//});
-
+//rotas pelo cmd adminlte
 Route::group(['middleware' => 'auth'], function () {
     //    Route::get('/link1', function ()    {
 //        // Uses Auth Middleware
@@ -53,7 +47,17 @@ Route::group(['middleware' => 'auth'], function () {
     #adminlte_routes
 });
 
-Route::get('routes', function() {
-    \Artisan::call('route:list');
-    return "<pre>".\Artisan::output();
-});
+//diversos
+//Route::get('/', function () {
+/*
+$banco = "(DESCRIPTION=(ADDRESS = (PROTOCOL = TCP)(HOST=192.168.60.131)(PORT=1521))(CONNECT_DATA=(SID=orcl)))";
+
+$conn = oci_connect('hr', 'oracle', $banco);
+
+if ($conn) {
+    print "Connected to Oracle!";
+}
+*/
+//   Debugbar::warning('Watch out…');
+//    return view('welcome');
+//});

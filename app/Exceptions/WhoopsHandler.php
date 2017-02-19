@@ -8,6 +8,7 @@ use App\Exceptions\Handler as BaseExceptionHandler;
 
 class WhoopsHandler extends BaseExceptionHandler {
 
+
     /**
      * Render an exception into a response.
      *

@@ -38,26 +38,30 @@
                     <a href="{{ url('/wishlist') }}">
                         <i class="fa fa-shopping-basket" aria-hidden="true"></i>
                         Wishlist
-                        ({{ Cart::instance('wishlist')->count(false) }})
+                        @if(Cart::instance('wishlist')->count(false) > 0)
+                            <span class="badge">{{ Cart::instance('wishlist')->count(false) }}</span>
+                        @endif
                     </a>
                 </li>
                 <li class="{{ set_active('cart') }}">
                     <a href="{{ url('/cart') }}">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         Carrinho
-                        ({{ Cart::instance('default')->count(false) }})
+                        @if(Cart::instance('default')->count(false) > 0)
+                            <span class="badge">{{ Cart::instance('default')->count(false) }}</span>
+                        @endif
                     </a>
                 </li>
                 @if (Auth::guest())
                     <li>
-                        <a href="{{ url('/login') }}">
+                        <a href="{{ route('login') }}">
                             <i class="fa fa-sign-in" aria-hidden="true"></i>
                             {{ trans('adminlte_lang::message.login') }}
                         </a>
                     </li>
                 @else
                     <li>
-                        <a href="/home">
+                        <a href="/user/home">
                             <i class="fa fa-user-o" aria-hidden="true"></i>
                             {{ Auth::user()->name }}
                         </a>

@@ -10,8 +10,18 @@
 | the IoC container for the system binding all of the various parts.
 |
 */
-
+/*
 $app = new Illuminate\Foundation\Application(
+    realpath(__DIR__.'/../')
+);
+*/
+/*
+| Foi retirado a classe Application do Laravel de modo a ter
+| o core da Aplicacao na metodologia DDD. A classe que está sendo
+| instanciada esta herdando de Illuminate\Foundation\Application
+|
+*/
+$app = new App\Support\Foundation\Application\Application(
     realpath(__DIR__.'/../')
 );
 
@@ -38,7 +48,7 @@ $app->singleton(
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    App\Exceptions\WhoopsHandler::class,
+    //App\Exceptions\WhoopsHandler::class//,
     App\Exceptions\Handler::class
 );
 

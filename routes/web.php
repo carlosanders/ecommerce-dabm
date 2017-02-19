@@ -16,11 +16,22 @@ Route::get('routes', function() {
     \Artisan::call('route:list');
     return "<pre>".\Artisan::output();
 });
+
+Route::group(['prefix' => 'user'], function () {
+
+    Route::auth();//coloco as rotas de auth no prefix user
+
+    Route::group(['middleware' => 'auth'], function () {
+        Route::get('/home', 'HomeController@index');
+    });
+});
+
+Route::name('checkout')
+    //->middleware('auth')
+    ->get('checkout', 'Site\SiteController@getCheckout');
+
 Route::get('/', 'Site\SiteController@index');
-Route::get('/all', 'Site\SiteController@getProductsAll');
-
-Route::prefix('');
-
+Route::get('all', 'Site\SiteController@getProductsAll');
 
 //rotas para gerir carrinho na sessao
 Route::resource('shop', 'Site\SiteController', ['only' => ['index', 'show']]);
@@ -39,6 +50,10 @@ Route::post('switchToCart/{id}', 'Site\WishlistController@switchToCart');
 
 //rotas pelo cmd adminlte
 Route::group(['middleware' => 'auth'], function () {
+
+    //Route::auth();
+    //Route::get('/home', 'HomeController@index');
+
     //    Route::get('/link1', function ()    {
 //        // Uses Auth Middleware
 //    });

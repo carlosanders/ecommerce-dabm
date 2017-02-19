@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Site;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Product;
+use Illuminate\Support\Facades\Auth;
 
 class SiteController extends Controller
 {
@@ -47,6 +48,16 @@ class SiteController extends Controller
             'product' => $product,
             'interested' => $interested,
         ]);
+    }
+
+    public function getCheckout()
+    {
+        if (!Auth::check()) {
+            //return redirect()->route('login');
+
+            session()->flash('not_logged', ' Já está cadastrado?');
+        }
+        return view('site.checkout');
     }
 
 //    public function getAddToCart(Request $request, $id)

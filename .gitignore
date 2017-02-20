@@ -1,4 +1,3 @@
-/public/storage
 /vend*
 /.idea
 Homestead.json
@@ -7,14 +6,19 @@ _ide_helper.php
 .phpstorm.meta.php
 _ide_helper_models.php
 database/migrations/
+/public/storage
 public/vendor/
+public/plugins/
+public/img/
+public/fonts/
+public/common/
+public/css/
+public/js/
 .buildpath
 .project
 .settings/
 packages/
-public/common/
-public/css/
-public/js/
 node_modules/
 .DS_Store
 .env
+bower_components/

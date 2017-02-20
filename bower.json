@@ -1,0 +1,25 @@
+{
+  "name": "laravel54",
+  "description": "Loja virtual",
+  "main": "",
+  "authors": [
+    "Carlos Anders <carlosanders@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jeasyui": "^1.4.4",
+    "admin-lte": "^2.3.11",
+    "kimifdw-jquery-easyui": "1.5.0"
+  }
+}

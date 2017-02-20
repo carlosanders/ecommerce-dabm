@@ -66,6 +66,19 @@ return [
             'sslmode' => 'prefer',
         ],
 
+        'oracle' => [
+            'driver'        => 'oracle',
+            'tns'           => '(DESCRIPTION=(ADDRESS = (PROTOCOL = TCP)(HOST=192.168.60.131)(PORT=1521))(CONNECT_DATA=(SID=orcl)))',
+            'host'          => env('ORA_HOST', ''),
+            'port'          => env('ORA_PORT', '1521'),
+            'database'      => env('ORA_DATABASE', ''),
+            'username'      => env('ORA_USERNAME', ''),
+            'password'      => env('ORA_PASSWORD', ''),
+            'charset'       => env('ORA_CHARSET', 'AL32UTF8'),
+            'prefix'        => env('ORA_PREFIX', ''),
+            'prefix_schema' => env('ORA_SCHEMA_PREFIX', ''),
+        ],
+
     ],
 
     /*

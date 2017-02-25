@@ -292,6 +292,399 @@ class ProductTableSeeder extends Seeder
                 'desconto' => 0,
                 'name_product_id' => 5,
             ], //23
+            //cinto
+            [
+                'id' => 24,
+                'pi' => '190017304',
+                'tamanho' => 'Cortado',
+                'uf' => 'UN',
+                'peso_unit' => 0.07,
+                'vol_unit' => 10.5,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 6,
+            ], //24
+            [
+                'id' => 25,
+                'pi' => '190017021',
+                'tamanho' => 'Cortado',
+                'uf' => 'UN',
+                'peso_unit' => 0.07,
+                'vol_unit' => 10.5,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 7,
+            ], //25
+            //CALCA BRANCA 6 itens
+            [
+                'id' => 26,
+                'pi' => '190012435',
+                'tamanho' => '40',
+                'uf' => 'UN',
+                'peso_unit' => 0.484,
+                'vol_unit' => 5752.8,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 8,
+            ], //26
+            [
+                'id' => 27,
+                'pi' => '190012436',
+                'tamanho' => '42',
+                'uf' => 'UN',
+                'peso_unit' => 0.484,
+                'vol_unit' => 5752.8,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 8,
+            ], //27
+            [
+                'id' => 28,
+                'pi' => '190012437',
+                'tamanho' => '44',
+                'uf' => 'UN',
+                'peso_unit' => 0.484,
+                'vol_unit' => 5752.8,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 8,
+            ], //28
+            [
+                'id' => 29,
+                'pi' => '190012438',
+                'tamanho' => '46',
+                'uf' => 'UN',
+                'peso_unit' => 0.484,
+                'vol_unit' => 5752.8,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 8,
+            ], //29
+            [
+                'id' => 30,
+                'pi' => '190012439',
+                'tamanho' => '48',
+                'uf' => 'UN',
+                'peso_unit' => 0.484,
+                'vol_unit' => 5752.8,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 8,
+            ], //30
+            [
+                'id' => 31,
+                'pi' => '190012440',
+                'tamanho' => '50',
+                'uf' => 'UN',
+                'peso_unit' => 0.484,
+                'vol_unit' => 5752.8,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 8,
+            ], //31
+            // CALCA CINZA
+            [
+                'id' => 32,
+                'pi' => '190018341',
+                'tamanho' => '40',
+                'uf' => 'UN',
+                'peso_unit' => 0.484,
+                'vol_unit' => 5752.8,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 9,
+            ], //32
+            [
+                'id' => 33,
+                'pi' => '190018342',
+                'tamanho' => '42',
+                'uf' => 'UN',
+                'peso_unit' => 0.484,
+                'vol_unit' => 5752.8,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 9,
+            ], //33
+            [
+                'id' => 34,
+                'pi' => '190018343',
+                'tamanho' => '44',
+                'uf' => 'UN',
+                'peso_unit' => 0.484,
+                'vol_unit' => 5752.8,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 9,
+            ], //34
+            [
+                'id' => 35,
+                'pi' => '190018345',
+                'tamanho' => '46',
+                'uf' => 'UN',
+                'peso_unit' => 0.484,
+                'vol_unit' => 5752.8,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 9,
+            ], //35
+            [
+                'id' => 36,
+                'pi' => '190018347',
+                'tamanho' => '48',
+                'uf' => 'UN',
+                'peso_unit' => 0.484,
+                'vol_unit' => 5752.8,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 9,
+            ], //36
+            [
+                'id' => 37,
+                'pi' => '190018348',
+                'tamanho' => '50',
+                'uf' => 'UN',
+                'peso_unit' => 0.484,
+                'vol_unit' => 5752.8,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 9,
+            ], //37
+            //CALCA FEM CINZA
+            [
+                'id' => 38,
+                'pi' => '190020511',
+                'tamanho' => '40',
+                'uf' => 'UN',
+                'peso_unit' => 0.484,
+                'vol_unit' => 5752.8,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 10,
+            ], //38
+            [
+                'id' => 39,
+                'pi' => '190012193',
+                'tamanho' => '42',
+                'uf' => 'UN',
+                'peso_unit' => 0.484,
+                'vol_unit' => 5752.8,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 10,
+            ], //39
+            [
+                'id' => 40,
+                'pi' => '190012195',
+                'tamanho' => '44',
+                'uf' => 'UN',
+                'peso_unit' => 0.484,
+                'vol_unit' => 5752.8,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 10,
+            ], //40
+            [
+                'id' => 41,
+                'pi' => '190012196',
+                'tamanho' => '46',
+                'uf' => 'UN',
+                'peso_unit' => 0.484,
+                'vol_unit' => 5752.8,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 10,
+            ], //41
+            [
+                'id' => 42,
+                'pi' => '190012197',
+                'tamanho' => '48',
+                'uf' => 'UN',
+                'peso_unit' => 0.484,
+                'vol_unit' => 5752.8,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 10,
+            ], //42
+            //CALCAO AZUL OF
+            [
+                'id' => 43,
+                'pi' => '190007984',
+                'tamanho' => 'G',
+                'uf' => 'UN',
+                'peso_unit' => 0.085,
+                'vol_unit' => 1520,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 11,
+            ], //43
+            [
+                'id' => 44,
+                'pi' => '190007985',
+                'tamanho' => 'GG',
+                'uf' => 'UN',
+                'peso_unit' => 0.085,
+                'vol_unit' => 1520,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 11,
+            ], //44
+            [
+                'id' => 45,
+                'pi' => '190007983',
+                'tamanho' => 'M',
+                'uf' => 'UN',
+                'peso_unit' => 0.085,
+                'vol_unit' => 1520,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 11,
+            ], //45
+            [
+                'id' => 46,
+                'pi' => '190007982',
+                'tamanho' => 'P',
+                'uf' => 'UN',
+                'peso_unit' => 0.085,
+                'vol_unit' => 1520,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 11,
+            ], //46
+            //CALCAO AZUL GINASTICA PRACA
+            [
+                'id' => 47,
+                'pi' => '190007977',
+                'tamanho' => 'G',
+                'uf' => 'UN',
+                'peso_unit' => 0.085,
+                'vol_unit' => 1520,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 12,
+            ], //47
+            [
+                'id' => 48,
+                'pi' => '190007976',
+                'tamanho' => 'GG',
+                'uf' => 'UN',
+                'peso_unit' => 0.085,
+                'vol_unit' => 1520,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 12,
+            ], //48
+            [
+                'id' => 49,
+                'pi' => '190007978',
+                'tamanho' => 'M',
+                'uf' => 'UN',
+                'peso_unit' => 0.085,
+                'vol_unit' => 1520,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 12,
+            ], //49
+            [
+                'id' => 50,
+                'pi' => '190007979',
+                'tamanho' => 'P',
+                'uf' => 'UN',
+                'peso_unit' => 0.085,
+                'vol_unit' => 1520,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 12,
+            ], //50
+            //CALCAO NATACAO
+            [
+                'id' => 51,
+                'pi' => '190011896',
+                'tamanho' => 'G',
+                'uf' => 'UN',
+                'peso_unit' => 0.085,
+                'vol_unit' => 1520,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 13,
+            ], //51
+            [
+                'id' => 52,
+                'pi' => '190017046',
+                'tamanho' => 'GG',
+                'uf' => 'UN',
+                'peso_unit' => 0.085,
+                'vol_unit' => 1520,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 13,
+            ], //52
+            [
+                'id' => 53,
+                'pi' => '190011897',
+                'tamanho' => 'M',
+                'uf' => 'UN',
+                'peso_unit' => 0.085,
+                'vol_unit' => 1520,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 13,
+            ], //53
+            [
+                'id' => 54,
+                'pi' => '190011901',
+                'tamanho' => 'P',
+                'uf' => 'UN',
+                'peso_unit' => 0.085,
+                'vol_unit' => 1520,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 13,
+            ], //54
+            //CAMISA BRANCA M/M C/PASS
+            [
+                'id' => 55,
+                'pi' => '190012283',
+                'tamanho' => '1',
+                'uf' => 'UN',
+                'peso_unit' => 0.29,
+                'vol_unit' => 2835,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 14,
+            ], //55
+            [
+                'id' => 56,
+                'pi' => '190012284',
+                'tamanho' => '2',
+                'uf' => 'UN',
+                'peso_unit' => 0.29,
+                'vol_unit' => 2835,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 14,
+            ], //56
+            [
+                'id' => 57,
+                'pi' => '190012285',
+                'tamanho' => '3',
+                'uf' => 'UN',
+                'peso_unit' => 0.29,
+                'vol_unit' => 2835,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 14,
+            ], //57
+            [
+                'id' => 58,
+                'pi' => '190012286',
+                'tamanho' => '4',
+                'uf' => 'UN',
+                'peso_unit' => 0.29,
+                'vol_unit' => 2835,
+                'preco' => 10,
+                'desconto' => 0,
+                'name_product_id' => 14,
+            ], //58
 
         ));
 

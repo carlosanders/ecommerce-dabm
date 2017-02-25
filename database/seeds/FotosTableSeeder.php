@@ -123,6 +123,167 @@ class FotosTableSeeder extends Seeder
                 'product_id' => 23,
                 'image_path' => '202.JPG',
             ], //23
+            //cinto
+            [
+                'product_id' => 24,
+                'image_path' => '51.JPG',
+            ], //244
+            [
+                'product_id' => 23,
+                'image_path' => '250.JPG',
+            ], //23
+            //CALCA BRANCA 6 itens
+            [
+                'product_id' => 24,
+                'image_path' => '230.9.JPG',
+            ], //24
+            [
+                'product_id' => 25,
+                'image_path' => '231.JPG',
+            ], //25
+            [
+                'product_id' => 26,
+                'image_path' => '231.JPG',
+            ], //26
+            [
+                'product_id' => 26,
+                'image_path' => '231.JPG',
+            ], //26
+            [
+                'product_id' => 27,
+                'image_path' => '231.JPG',
+            ], //27
+            [
+                'product_id' => 28,
+                'image_path' => '231.JPG',
+            ], //28
+            [
+                'product_id' => 29,
+                'image_path' => '231.JPG',
+            ], //29
+            [
+                'product_id' => 30,
+                'image_path' => '231.JPG',
+            ], //30
+            [
+                'product_id' => 31,
+                'image_path' => '231.JPG',
+            ], //31
+            // CALCA CINZA
+            [
+                'product_id' => 32,
+                'image_path' => '233.JPG',
+            ], //32
+            [
+                'product_id' => 33,
+                'image_path' => '233.JPG',
+            ], //33
+            [
+                'product_id' => 34,
+                'image_path' => '233.JPG',
+            ], //34
+            [
+                'product_id' => 35,
+                'image_path' => '233.JPG',
+            ], //35
+            [
+                'product_id' => 36,
+                'image_path' => '233.JPG',
+            ], //36
+            [
+                'product_id' => 37,
+                'image_path' => '233.JPG',
+            ], //37
+            //CALCA FEM CINZA
+            [
+                'product_id' => 38,
+                'image_path' => '236.JPG',
+            ], //38
+            [
+                'product_id' => 39,
+                'image_path' => '236.JPG',
+            ], //39
+            [
+                'product_id' => 40,
+                'image_path' => '236.JPG',
+            ], //40
+            [
+                'product_id' => 41,
+                'image_path' => '236.JPG',
+            ], //41
+            [
+                'product_id' => 42,
+                'image_path' => '236.JPG',
+            ], //42
+            //CALCAO AZUL OF
+            [
+                'product_id' => 43,
+                'image_path' => '32.JPG',
+            ], //43
+            [
+                'product_id' => 44,
+                'image_path' => '32.JPG',
+            ], //44
+            [
+                'product_id' => 45,
+                'image_path' => '32.JPG',
+            ], //45
+            [
+                'product_id' => 46,
+                'image_path' => '32.JPG',
+            ], //46
+            //CALCAO AZUL GINASTICA PRACA
+            [
+                'product_id' => 47,
+                'image_path' => '241.JPG',
+            ], //47
+            [
+                'product_id' => 48,
+                'image_path' => '241.JPG',
+            ], //48
+            [
+                'product_id' => 49,
+                'image_path' => '241.JPG',
+            ], //49
+            [
+                'product_id' => 50,
+                'image_path' => '241.JPG',
+            ], //50
+            //CALCAO NATACAO
+            [
+                'product_id' => 51,
+                'image_path' => '33.JPG',
+            ], //51
+            [
+                'product_id' => 52,
+                'image_path' => '33.JPG',
+            ], //52
+            [
+                'product_id' => 53,
+                'image_path' => '33.JPG',
+            ], //53
+            [
+                'product_id' => 54,
+                'image_path' => '33.JPG',
+            ], //54
+            //CAMISA BRANCA M/M C/PASS
+            [
+                'product_id' => 55,
+                'image_path' => '245.JPG',
+            ], //55
+            [
+                'product_id' => 56,
+                'image_path' => '245.JPG',
+            ], //56
+            [
+                'product_id' => 57,
+                'image_path' => '245.JPG',
+            ], //57
+            [
+                'product_id' => 58,
+                'image_path' => '245.JPG',
+            ], //58
+
         ));
 
         // Exibe uma informação no console durante o processo de seed

@@ -26,7 +26,7 @@ class UsersTableSeeder extends Seeder
         $this->createWithModel();
 
         // Cria usuários demo dados faker
-        $this->createUsers(50);
+        $this->createUsers(10);
 
     }
 

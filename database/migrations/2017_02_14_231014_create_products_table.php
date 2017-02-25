@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('tamanho');
             $table->string('uf');
             $table->decimal('peso_unit', 11, 2);
-            $table->integer('vol_unit');
+            $table->decimal('vol_unit', 11, 2);
             $table->decimal('preco', 11, 2);
             $table->decimal('desconto', 11, 2);
             $table->boolean('pg_init')->default(false);

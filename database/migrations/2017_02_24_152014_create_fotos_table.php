@@ -19,7 +19,7 @@ class CreateFotosTable extends Migration
             $table->foreign('product_id')
                 ->references('id')
                 ->on('products');
-            $table->string('image_path')->unique();
+            $table->string('image_path');
 
             //chave primaria composta
             //$table->primary(['id', 'product_id']);

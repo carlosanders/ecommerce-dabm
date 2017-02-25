@@ -20,7 +20,6 @@ class CreateEstoqueTable extends Migration
                 ->references('id')
                 ->on('products');
             $table->integer('qtd');
-            $table->string('tamanho');
             $table->timestamps();
             //chave primaria composta
             //$table->primary(['id', 'product_id']);

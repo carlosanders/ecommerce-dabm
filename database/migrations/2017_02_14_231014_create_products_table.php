@@ -16,15 +16,19 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
             $table->string('pi')->unique();
-            $table->string('nome_item')->unique();
+            $table->string('tamanho');
             $table->string('uf');
-            $table->longText('description');
             $table->decimal('peso_unit', 11, 2);
             $table->integer('vol_unit');
             $table->decimal('preco', 11, 2);
             $table->decimal('desconto', 11, 2);
-            $table->string('slug')->unique();
             $table->boolean('pg_init')->default(false);
+            // Cada PI pode ter o mesmo name_product
+            $table->integer('name_product_id')->unsigned();
+            $table->foreign('name_product_id')
+                ->references('id')
+                ->on('names_products');
+
             $table->timestamps();
         });
     }

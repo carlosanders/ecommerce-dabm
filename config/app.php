@@ -187,6 +187,7 @@ return [
         Yajra\Oci8\Oci8ServiceProvider::class,
         Laravelista\Ekko\EkkoServiceProvider::class,
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
+        Kodeine\Acl\AclServiceProvider::class,
 
     ],
 

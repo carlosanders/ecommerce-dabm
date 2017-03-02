@@ -21,6 +21,7 @@ $factory->define(App\Models\User::class,
         static $password;
 
         return [
+            'username' => $faker->firstName,
             'name' => trim($faker->name),
             'cpf' => $faker->cpf(false),
             'email' => $faker->unique()->safeEmail,

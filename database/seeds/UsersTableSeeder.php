@@ -46,6 +46,7 @@ class UsersTableSeeder extends Seeder
     {
         // cria um usuario padrao para teste
         $user = new User();
+        $user->username = 'carlosanders';
         $user->name = 'Carlos Anders';
         $user->cpf = 7504022705;
         $user->email = 'carlosanders@gmail.com';

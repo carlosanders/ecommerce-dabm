@@ -28,7 +28,8 @@
         ],
         "psr-4": {
             "App\\": "app/",
-            "Modules\\": "Modules/"
+            "Modules\\": "Modules/",
+            "Kodeine\\Acl\\": "/Users/carlosanders/uteis/scripts/packages/carlosanders/laravel-acl/src/Kodeine/Acl/"
         },
         "files": [
             "app/helpers/helpers.php"

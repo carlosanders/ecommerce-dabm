@@ -29,6 +29,7 @@ class DatabaseSeeder extends Seeder
             $this->call(PedidosTableSeeder::class);
             $this->call(PagamentosTableSeeder::class);
             $this->call(PagGruTableSeeder::class);
+            $this->call(ACLSeeder::class);
         endif;
 
         if(app()->environment('production')):

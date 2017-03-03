@@ -32,6 +32,37 @@ class UsersTableSeeder extends Seeder
 
     private function createUsers($max = 20)
     {
+
+        DB::table("users")->insert(array(
+            [
+                'id' => 2,
+                'username' => 'gerenteanders',
+                'name' => 'Gerente Anders',
+                'cpf' => 7504022706,
+                'email' => 'gerente@marinha.mar.mil.br',
+                'nip' => 6840681,
+                'password' => bcrypt('m@ster2016'),
+            ], //2
+            [
+                'id' => 3,
+                'username' => 'vendaanders',
+                'name' => 'Vendedor Anders',
+                'cpf' => 7504022707,
+                'email' => 'vendedor@marinha.mar.mil.br',
+                'nip' => 6840682,
+                'password' => bcrypt('m@ster2016'),
+            ], //3
+            [
+                'id' => 4,
+                'username' => 'useranders',
+                'name' => 'User Anders',
+                'cpf' => 7504022708,
+                'email' => 'user@marinha.mar.mil.br',
+                'nip' => 6840683,
+                'password' => bcrypt('m@ster2016'),
+            ], //4
+        ));
+
         $this->faker = FactoryFaker::create('pt_BR');
 
         factory(User::class, $max)->create();
@@ -46,7 +77,8 @@ class UsersTableSeeder extends Seeder
     {
         // cria um usuario padrao para teste
         $user = new User();
-        $user->name = 'Carlos Anders';
+        $user->username = 'carlosanders';
+        $user->name = 'Carlos Anders - Admin';
         $user->cpf = 7504022705;
         $user->email = 'carlosanders@gmail.com';
         $user->nip = 6840680;

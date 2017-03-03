@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f1fb341e5ba764e9e72a56e1abdba12",
+    "content-hash": "737f31838d9ea6bfb4906e7e76f5981b",
     "packages": [
         {
             "name": "acacha/admin-lte-template-laravel",
@@ -179,6 +179,56 @@
                 "user"
             ],
             "time": "2016-12-05T13:39:37+00:00"
+        },
+        {
+            "name": "carlosanders/laravel-acl",
+            "version": "v0.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/carlosanders/laravel-acl.git",
+                "reference": "4f6ffd453a2d4dbcc9de9febd05476aa0d92de39"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/carlosanders/laravel-acl/zipball/4f6ffd453a2d4dbcc9de9febd05476aa0d92de39",
+                "reference": "4f6ffd453a2d4dbcc9de9febd05476aa0d92de39",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "4.2.x|~5.0",
+                "illuminate/support": "4.2.x|~5.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [],
+                "psr-0": {
+                    "Kodeine\\Acl\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ahsen M.",
+                    "homepage": "https://github.com/kodeine",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Light-weight role-based permissions for Laravel 5 built in Auth system.",
+            "keywords": [
+                "acl",
+                "auth",
+                "eloquent",
+                "kodeine",
+                "laravel",
+                "permissions",
+                "roles",
+                "security"
+            ],
+            "time": "2015-03-17T04:36:38+00:00"
         },
         {
             "name": "creativeorange/gravatar",

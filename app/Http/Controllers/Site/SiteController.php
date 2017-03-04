@@ -18,7 +18,7 @@ class SiteController extends Controller
     {
         $categories = Category::all();
         $products = Product::where('pg_init', 1)
-            ->orderBy('title', 'description')
+            //->orderBy('title', 'description')
             //->take(10)
             ->get();
 

@@ -191,8 +191,6 @@ return [
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
         //Add ACL
         Kodeine\Acl\AclServiceProvider::class,
-        //Pattern Repository
-        Prettus\Repository\Providers\RepositoryServiceProvider::class,
 
     ],
 

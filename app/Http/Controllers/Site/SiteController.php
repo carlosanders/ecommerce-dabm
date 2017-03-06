@@ -38,9 +38,11 @@ class SiteController extends Controller
         //$product = Product::find(1)->nameProduct;
         //dd($product);
 
-        $products = $this->repository->findAll();
+        //$products = $this->repository->findAll();
         //$products = $this->repository->first();
         //$products = $this->repository->first(['pi']);
+        $products = $this->repository->paginate(20);
+
 
         dd($products);
 

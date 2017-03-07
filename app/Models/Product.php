@@ -13,21 +13,36 @@ class Product extends Model
     //quais o campos que serao passados para o model, ou seja, os campos que serao
     //usados da table e, questao. qualquer coisa alem disso sera ignorado pelo model
     protected $fillable = [
-        'image_path',
-        'title',
-        'description',
-        'value',
-        'qtd',
-        'url',
-        'pg_init'
+        'pi',
+        'tamanho',
+        'uf',
+        'peso_unit',
+        'vol_unit',
+        'preco',
+        'desconto',
+        'pg_init',
+        'name_product_id',
     ];
 
-    public function setUrlAttribute($value = '')
+    /**
+     * Get the name product owns the product
+     * One To Many (Inverse)
+     * Permite que um produto acesse seu nome de produto
+     */
+    public function nameProduct()
     {
-        if ($value == '') {
-            $value = $this->attributes['title'];
-        }
+        return $this->belongsTo('\App\Models\NameProduct');
+    }
 
-        $this->attributes['url'] = str_slug($value);
+    /**
+     * Get the images for the product.
+     *
+     * Relcionamento "one-to-many" usado para definir
+     * que o Model Product possui qualquer qtd
+     * do Model Images
+     */
+    public function images()
+    {
+        return $this->hasMany('\App\Models\Image');
     }
 }

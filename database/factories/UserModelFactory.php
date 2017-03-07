@@ -12,13 +12,21 @@
 */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(App\Models\User::class, function (Faker\Generator $faker) {
-    static $password;
+use App\Support\Faker\Pessoa;
 
-    return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = bcrypt('secret'),
-        'remember_token' => str_random(10),
-    ];
-});
+$factory->define(App\Models\User::class,
+    function (Faker\Generator $faker) {
+
+        $faker->addProvider(new Pessoa($faker));
+        static $password;
+
+        return [
+            'username' => $faker->firstName,
+            'name' => trim($faker->name),
+            'cpf' => $faker->cpf(false),
+            'email' => $faker->unique()->safeEmail,
+            'nip' => str_random(8),
+            'password' => $password ?: $password = bcrypt('secret'),
+            'remember_token' => str_random(10),
+        ];
+    });

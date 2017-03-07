@@ -31,12 +31,13 @@
                 <tr>
                     <td class="table-image">
                         <div style="width:145px;height:100px;overflow:hidden;margin-left:5px;">
-                            <a href="{{ url('shop', [$item->model->slug]) }}"><img
-                                    src="{{ $item->model->image_path }}" alt="product"
+                            <a href="{{ url('shop', [$item->model->pi]) }}"><img
+                                    src="{{ asset('img_farda/' . $item->model->images->first()->image_path) }}"
+                                    alt="product"
                                     class="img-responsive cart-image"></a>
                         </div>
                     </td>
-                    <td><a href="{{ url('shop', [$item->model->slug]) }}">
+                    <td><a href="{{ url('shop', [$item->model->pi]) }}">
                             {{ $item->name }}</a></td>
 
                     <td>$ {{ $item->subtotal }}</td>

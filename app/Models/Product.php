@@ -33,4 +33,16 @@ class Product extends Model
     {
         return $this->belongsTo('\App\Models\NameProduct');
     }
+
+    /**
+     * Get the images for the product.
+     *
+     * Relcionamento "one-to-many" usado para definir
+     * que o Model Product possui qualquer qtd
+     * do Model Images
+     */
+    public function images()
+    {
+        return $this->hasMany('\App\Models\Image');
+    }
 }

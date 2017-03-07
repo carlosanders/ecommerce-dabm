@@ -12,6 +12,7 @@ class User extends Authenticatable
 
     /**
      * The attributes that are mass assignable.
+     * Os atributos que são atribuíveis em massa.
      *
      * @var array
      */
@@ -27,6 +28,7 @@ class User extends Authenticatable
 
     /**
      * The attributes that should be hidden for arrays.
+     * Os atributos que devem ser ocultos para arrays.
      *
      * @var array
      */

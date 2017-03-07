@@ -26,4 +26,16 @@ class NameProduct extends Model
 
         $this->attributes['slug'] = str_slug($value);
     }
+
+    /**
+     * Get the products for the name product.
+     *
+     * Relcionamento "one-to-many" usdo para definir
+     * que o Model NameProduct possui qualquer qtd
+     * do Model Products
+     */
+    public function products()
+    {
+        return $this->hasMany('\App\Models\Product', 'name_product_id', 'id');
+    }
 }

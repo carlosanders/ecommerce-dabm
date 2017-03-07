@@ -184,9 +184,12 @@ return [
         Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
         //laravel-module
         Nwidart\Modules\LaravelModulesServiceProvider::class,
+        //Suporte a Oracle no Laravel
         Yajra\Oci8\Oci8ServiceProvider::class,
         Laravelista\Ekko\EkkoServiceProvider::class,
+        //Add Carrinho de compras
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
+        //Add ACL
         Kodeine\Acl\AclServiceProvider::class,
 
     ],

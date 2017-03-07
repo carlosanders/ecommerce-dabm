@@ -23,4 +23,26 @@ class Product extends Model
         'pg_init',
         'name_product_id',
     ];
+
+    /**
+     * Get the name product owns the product
+     * One To Many (Inverse)
+     * Permite que um produto acesse seu nome de produto
+     */
+    public function nameProduct()
+    {
+        return $this->belongsTo('\App\Models\NameProduct');
+    }
+
+    /**
+     * Get the images for the product.
+     *
+     * Relcionamento "one-to-many" usado para definir
+     * que o Model Product possui qualquer qtd
+     * do Model Images
+     */
+    public function images()
+    {
+        return $this->hasMany('\App\Models\Image');
+    }
 }

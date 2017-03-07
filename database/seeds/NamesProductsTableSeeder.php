@@ -1,8 +1,6 @@
 <?php
-
 use App\Models\NameProduct;
 use Illuminate\Database\Seeder;
-
 class NamesProductsTableSeeder extends Seeder
 {
     /**
@@ -15,10 +13,8 @@ class NamesProductsTableSeeder extends Seeder
         NameProduct::truncate();
         //
         $this->createWithModel();
-
         $this->createWithDB();
     }
-
     /**
      * Cria categoria baseado no Model Criado
      */
@@ -28,13 +24,10 @@ class NamesProductsTableSeeder extends Seeder
         $name->nome_item = title_case('BERMUDA FEM AZUL-MARINHO OFICIAL');
         $name->slug = $name->setSlugAttribute();
         $name->description = '...';
-
         $name->save();
-
         // Exibe uma informação no console durante o processo de seed
         $this->command->info('NameProduct ref a class Model\NameProduct.php created');
     }
-
     public function createWithDB()
     {
         DB::table("names_products")->insert(array(
@@ -103,8 +96,92 @@ class NamesProductsTableSeeder extends Seeder
                 'nome_item' => title_case('CAMISA BRANCA M/M C/PASS'),
                 'slug' => str_slug('CAMISA BRANCA M/M C/PASS'),
             ], //14
-        ));
-
+            [
+                'id' => 15,
+                'nome_item' => title_case('CAMISA BRANCA M/M S/PASS'),
+                'slug' => str_slug('CAMISA BRANCA M/M S/PASS'),
+            ], //15    
+            [
+                'id' => 16,
+                'nome_item' => title_case('CAMISA CINZA M/M'),
+                'slug' => str_slug('CAMISA CINZA M/M'),
+            ], //16 
+            [
+                'id' => 17,
+                'nome_item' => title_case('CAMISETA BRANCA GINASTICA'),
+                'slug' => str_slug('CAMISETA BRANCA GINASTICA'),
+            ], //17     
+            [
+                'id' => 18,
+                'nome_item' => title_case('CAMISETA BRANCA'),
+                'slug' => str_slug('CAMISETA BRANCA'),
+            ], //18         
+            [
+                'id' => 19,
+                'nome_item' => title_case('FIVELA PARA CINTO'),
+                'slug' => str_slug('FIVELA PARA CINTO'),
+            ], //19    
+            [
+                'id' => 20,
+                'nome_item' => title_case('GORRO CINZA'),
+                'slug' => str_slug('GORRO CINZA'),
+            ], //20    
+            [
+                'id' => 21,
+                'nome_item' => title_case('MAIO PRETO'),
+                'slug' => str_slug('MAIO PRETO'),
+            ], //21
+            [
+                'id' => 22,
+                'nome_item' => title_case('MEIA BRANCA'),
+                'slug' => str_slug('MEIA BRANCA'),
+            ], //22
+            [
+                'id' => 23,
+                'nome_item' => title_case('MEIA BRANCA ALGODAO'),
+                'slug' => str_slug('MEIA BRANCA ALGODAO'),
+            ], //23
+            [
+                'id' => 24,
+                'nome_item' => title_case('MEIA PRETA'),
+                'slug' => str_slug('MEIA PRETA'),
+            ], //24        
+            [
+                'id' => 25,
+                'nome_item' => title_case('MOCASSIM FEM BRANCO S/MEDIO'),
+                'slug' => str_slug('MOCASSIM FEM BRANCO S/MEDIO'),
+            ], //25      
+            [
+                'id' => 26,
+                'nome_item' => title_case('MOCASSIM FEM PRETO S/MEDIO'),
+                'slug' => str_slug('MOCASSIM FEM PRETO S/MEDIO'),
+            ], //26  
+            [
+                'id' => 27,
+                'nome_item' => title_case('SAIA BRANCA'),
+                'slug' => str_slug('SAIA BRANCA'),
+            ], //27    
+            [
+                'id' => 28,
+                'nome_item' => title_case('SAIA CINZA'),
+                'slug' => str_slug('SAIA CINZA'),
+            ], //28  
+            [
+                'id' => 29,
+                'nome_item' => title_case('SAPATO BRANCO'),
+                'slug' => str_slug('SAPATO BRANCO'),
+            ], //29                                                           
+            [
+                'id' => 30,
+                'nome_item' => title_case('SAPATO FEM BRANCO S/MEDIO'),
+                'slug' => str_slug('SAPATO FEM BRANCO S/MEDIO'),
+            ], //30  
+            [
+                'id' => 31,
+                'nome_item' => title_case('SAPATO PRETO'),
+                'slug' => str_slug('SAPATO PRETO'),
+            ], //31 
+         ));
         // Exibe uma informação no console durante o processo de seed
         $this->command->info('Table: "names_products" ref Facade DB demo created');
     }

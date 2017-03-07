@@ -5,30 +5,72 @@ namespace App\Http\Controllers\Site;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Product;
+use App\Repositories\Contracts\ProductRepositoryInterface;
 use Illuminate\Support\Facades\Auth;
 
 class SiteController extends Controller
 {
+
+    /**
+     * @var \App\Repositories\ProductRepositoryEloquent
+     */
+    private $repository;
+
+    public function __construct(ProductRepositoryInterface $repository)
+    {
+        $this->repository = $repository;
+    }
+
     /**
      * Show the application dashboard.
      *
      * @return Responsethumbnail.blade.php
      */
+    //public function index(ProductRepositoryEloquent $repository)
     public function index()
     {
         $categories = Category::all();
-        $products = Product::where('pg_init', 1)
-            ->orderBy('title', 'description')
-            //->take(10)
-            ->get();
+        //$products = Product::where('pg_init', 1)
+        //->orderBy('title', 'description')
+        //->take(10)
+        // ->get();
+        //relacionamento funcionando
+        //$product = Product::find(1)->nameProduct;
+        //dd($product);
 
+        //$products = $this->repository->findAll();
+        //$products = $this->repository->first();
+        //$products = $this->repository->first(['pi']);
+        //$products = $this->repository->simplePaginate(5);
+        //$products = $this->repository->with(['nameProduct', 'images']);
+        //$products = $products->all();
+        //$products = $products->where('pg_init', 1)->get();
+
+        //faz um relacionamento com nomeProduto e Foto
+        $stmt = $this->repository->with(['nameProduct', 'images']);
+        //aplica a condicao depois que fizer o relacionamento
+        $products = $stmt->findWhere([
+            'pg_init' => '1',//page initial active
+        ]);
+        //dd($products);
+
+//        $images = Product::find(1)->images->first();
+//        dd($images->image_path);
+
+//        foreach ($products->all() as $product) {
+//            var_dump($product->nameProduct->slug);
+//            var_dump($product->images->first()->image_path);
+//        }
+//        dd(1);
 
         return view('site.site')->with(compact('categories', 'products'));
     }
 
     public function getProductsAll()
     {
-        $products = Product::all();
+        $stmt = $this->repository->with(['nameProduct', 'images']);
+        //$products = Product::all();
+        $products = $stmt->all();
 
         return view('site.productsall')->with(compact('products'));
     }
@@ -36,16 +78,51 @@ class SiteController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  string $slug
+     * @param  string $pi
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show($pi)
     {
-        $product = Product::where('slug', $slug)->firstOrFail();
-        $interested = Product::where('slug', '!=', $slug)->get()->random(4);
+
+        //faz um relacionamento com nomeProduto e Foto
+        $stmt = $this->repository->with(['nameProduct', 'images']);
+
+        $product = $stmt->findByField('pi', $pi);
+        //dd($product);
+
+        $where = [
+            ['pi', '!=', $pi],
+        ];
+
+        $interested = $stmt->getRandom($where, 4, ['nameProduct', 'images']);
+        //dd($interested);
+
+        // teste 1
+//        $stmt = $this->repository->with([
+//            'nameProduct' => function ($query) use ($slug) {
+//                $query->where('slug', $slug);
+//            },
+//            'images',
+//        ]);
+//        dd($stmt->first());
+
+        // teste 2
+//        $stmt = $this->repository->scopeQuery(function($query){
+//            //return $query->orderBy('pi','asc');
+//
+//        })->all();
+
+        //teste 3
+//        $p = $stmt->whereHasGet('nameProduct', function ($query) use ($slug) {
+//            $query->where('slug', $slug);
+//        });
+//        dd($p);
+
+        //$product = Product::where('slug', $slug)->firstOrFail();
+        //$interested = Product::where('slug', '!=', $slug)->get()->random(4);
 
         return view('site.detalheproduto')->with([
-            'product' => $product,
+            'product' => $product->first(),
             'interested' => $interested,
         ]);
     }
@@ -57,6 +134,7 @@ class SiteController extends Controller
 
             session()->flash('not_logged', ' Já está cadastrado?');
         }
+
         return view('site.checkout');
     }
 

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +14,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        //https://laravel-news.com/laravel-5-4-key-too-long-error
+        Schema::defaultStringLength(191);
     }
 
     /**
@@ -27,5 +29,17 @@ class AppServiceProvider extends ServiceProvider
             $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
             $this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);
         }
+
+        //Register Repository
+        $this->registerRepository();
+    }
+
+    private function registerRepository()
+    {
+//        $this->app->register([
+//            \App\Providers\RepositoryServiceProvider::class,
+//        ]);
+        $this->app->register(\App\Providers\RepositoryServiceProvider::class);
+
     }
 }

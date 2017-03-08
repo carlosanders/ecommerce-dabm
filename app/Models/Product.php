@@ -45,4 +45,10 @@ class Product extends Model
     {
         return $this->hasMany('\App\Models\Image');
     }
+
+    public function stock()
+    {
+        return $this->hasOne('App\Models\Stock');
+    }
+
 }

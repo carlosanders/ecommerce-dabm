@@ -14,7 +14,8 @@
     @endif
 
     @if (Auth::check())
-        <h4>Olá {{ Auth::user()->name }}, obrigado pelo compra, preencha os dados abaixo para prosseguir.</h4>
+        <h4>Olá {{ Auth::user()->name }},
+            obrigado pelo compra, preencha os dados abaixo para prosseguir.</h4>
     @endif
 
 @endsection
@@ -34,7 +35,7 @@
                     <form>
                         <div class="form-group">
                             <label for="b_name">Nome:</label>
-                            <input type="text" class="form-control" id="b_name" value="{{ Auth::user()->name }}" />
+                            <input type="text" class="form-control" id="b_name" value="{{ Auth::user()->name }}"/>
                         </div>
                         <div class="form-group">
                             <label for="b_sobrenome">Sobrenome:</label>

@@ -33,8 +33,11 @@
                 Add to Wishlist</button>
         </form>
 
-
         <br /><br />
+        Tamanho: {{ $product->tamanho }}
+        <br />
+        REF PI: {{ $product->pi }}
+        <br />
         Descrição:
         <br>
 

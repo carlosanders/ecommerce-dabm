@@ -10,13 +10,13 @@
     </div>
 
     <div class="col-md-8">
-        <h3>R$ {{ $product->preco }}</h3>
+        <h3 class="text-info">R$ {{ $product->preco }}</h3>
         <form action="{{ url('/cart') }}" method="POST" class="side-by-side form-inline">
             {!! csrf_field() !!}
             <input type="hidden" name="id" value="{{ $product->id }}">
             <input type="hidden" name="name" value="{{ $product->nameProduct->nome_item }}">
             <input type="hidden" name="price" value="{{ $product->preco }}">
-            <button type="submit" class="btn btn-success btn-lg">
+            <button type="submit" class="btn btn-success btn-md">
                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                 Add to Cart</button>
         </form>
@@ -28,16 +28,16 @@
             <input type="hidden" name="price" value="{{ $product->preco }}">
 
 
-            <button type="submit" class="btn btn-primary btn-lg">
+            <button type="submit" class="btn btn-primary btn-md">
                 <i class="fa fa-shopping-basket" aria-hidden="true"></i>
                 Add to Wishlist</button>
         </form>
 
-        <br /><br />
-        Tamanho: {{ $product->tamanho }}
         <br />
-        REF PI: {{ $product->pi }}
         <br />
+        <p class="text-primary">Tamanho: <span class="badge">{{ $product->tamanho }}</span></p>
+        <p class="text-primary">Itens em estoque: <span class="badge">{{ $product->stock->qtd }}</span></p>
+        <p class="text-primary">REF PI: <strong>{{ $product->pi }}</strong></p>
         Descrição:
         <br>
 

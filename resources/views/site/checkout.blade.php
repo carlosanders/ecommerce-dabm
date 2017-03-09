@@ -9,13 +9,19 @@
     @if (session()->has('not_logged'))
         <div class="alert alert-info">
             <strong>{{ session()->get('not_logged') }}</strong>
-            <a href="{{ route('login') }}" class="alert-link">Clique aqui para entrar</a>.
+            <a href="{{ route('login') }}" class="alert-link">
+                Clique aqui para entrar
+                <span class="glyphicon glyphicon-log-in"></span>
+            </a>.
         </div>
     @endif
 
     @if (Auth::check())
-        <h4>Olá {{ Auth::user()->name }},
-            obrigado pelo compra, preencha os dados abaixo para prosseguir.</h4>
+        <h4 class="text-warning">Olá <strong>{{ Auth::user()->name }}</strong>,
+            obrigado pelo compra, preencha os dados abaixo
+            para finalizar o processo.
+            <span class="glyphicon glyphicon-ok"></span>
+        </h4>
     @endif
 
 @endsection
@@ -29,48 +35,75 @@
 @section('main-content')
     <div class="row">
         @if (Auth::check())
-            <div class="col-sm-6">
-                <h4>Detalhes de Cobrança:</h4>
-                <div class="featured-box align-left">
-                    <form>
-                        <div class="form-group">
-                            <label for="b_name">Nome:</label>
-                            <input type="text" class="form-control" id="b_name" value="{{ Auth::user()->name }}"/>
-                        </div>
-                        <div class="form-group">
-                            <label for="b_sobrenome">Sobrenome:</label>
-                            <input type="text" class="form-control" id="b_sobrenome">
-                        </div>
-                        <div class="form-group">
-                            <label for="b_email">E-mail:</label>
-                            <input type="email" class="form-control" id="b_email">
-                        </div>
-                        <div class="form-group">
-                            <label for="b_tel">Telefone:</label>
-                            <input type="text" class="form-control" id="b_tel">
-                        </div>
-                        <div class="form-group">
-                            <label for="b_end">Endereço:</label>
-                            <input type="text" class="form-control" id="b_end"
-                                   placeholder="Endereço"/>
-                            <br/>
-                            <input class="form-control" name="b_end_2"
-                                   id="b_end_2"
-                                   placeholder="Apartamento, conjunto, casa, etc. (opcional)"
-                                   autocomplete="address-line2"
-                                   value="" type="text">
-                        </div>
-
-
-                        <button type="submit" class="btn btn-default">Submit</button>
-                    </form>
+            <br/> <br/>
+            <div class="stepwizard">
+                <div class="stepwizard-row setup-panel">
+                    <div class="stepwizard-step">
+                        <a href="#VerifyEmail-step" type="button" class="btn btn-success btn-circle"
+                           id="VerifyEmail-step-1">
+                            <span class="glyphicon glyphicon-envelope"></span>
+                        </a>
+                        <p>Verify Email</p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <a href="#ProfileSetup-step" type="button" class="btn btn-primary btn-circle"
+                           id="ProfileSetup-step-2" disabled="disabled">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                        <p>Profile Setup</p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <a href="#Security-Setup-step" type="button" class="btn btn-success-2 btn-circle"
+                           disabled="disabled" id="Security-Setup-step-3">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </a>
+                        <p>Security Setup</p>
+                    </div>
                 </div>
             </div>
-
-            <div class="col-sm-6">
-                coluna 2
-            </div>
+            <form role="form">
+                <div class="row setup-content" id="VerifyEmail-step">
+                    <div class="col-xs-12">
+                        <div class="col-md-12">
+                            <br/>
+                            <div class="form-horizontal">
+                                <form role="form">
+                                    <fieldset>
+                                        <legend>Enter Your Email Information</legend>
+                                        <br/>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label" for="card-holder-name">Your
+                                                Email</label>
+                                            <div class="col-sm-9">
+                                                <input maxlength="100" type="email" required="required"
+                                                       class="form-control" placeholder="Enter Email"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label" for="card-number">Password</label>
+                                            <div class="col-sm-9">
+                                                <input maxlength="100" type="password" required="required"
+                                                       class="form-control" placeholder="Enter Password"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label" for="card-number">Re-enter
+                                                Password</label>
+                                            <div class="col-sm-9">
+                                                <input maxlength="100" type="password" required="required"
+                                                       class="form-control" placeholder="Enter Password"/>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Setup Profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            ...
         @endif
     </div>
-    ...
 @endsection

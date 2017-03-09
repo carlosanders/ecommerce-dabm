@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const shell = require('gulp-shell');
 const elixir = require('laravel-elixir');
 var bowerDir = './bower_components/';
+var src = './resources/assets';
 require('laravel-elixir-vue-2');
 
 
@@ -28,6 +29,11 @@ elixir(function(mix) {
         bowerDir + 'jquery/dist/jquery.js',
         bowerDir + 'bootstrap/dist/js/bootstrap.js',
     ], 'public/common/js/vendor.js');
+
+    mix.scripts([
+        src + '/js/ecommerce/steps.js',
+    ], 'public/common/js/loja-all.js');
+
 
 /*
     //copy to Admin-lte

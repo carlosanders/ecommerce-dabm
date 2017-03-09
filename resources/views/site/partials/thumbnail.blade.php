@@ -11,9 +11,10 @@
                 <div class="caption">
                     <h4 class="pull-right price">R$ {{ $product->preco }}</h4>
                     <h5><a href="{{ url('shop', [$product->pi]) }}">
-                            {{ $product->nameProduct->nome_item }}</a>
+                            {{ $product->pi }}</a>
                     </h5>
-                    <p>{{ $product->description }}</p>
+                    <p class="text-muted">{{ $product->nameProduct->nome_item }}</p>
+                    <p class="text-muted">Tamanho: <span class="badge">{{ $product->tamanho }}</span></p>
                     <div class="clearfix">
 
                         <form action="{{ url('/cart') }}" method="POST" class="side-by-side form-inline">

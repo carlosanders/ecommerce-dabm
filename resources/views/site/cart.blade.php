@@ -115,9 +115,10 @@
 
         </table>
 
-        <a href="{{ url('/shop') }}" class="btn btn-primary btn-lg">Continue Comprando</a> &nbsp;
+        <a href="{{ url('/shop') }}" class="btn btn-primary btn-lg">
+            <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i> Continue Comprando</a> &nbsp;
         <a href="{{ url('/checkout') }}" class="btn btn-success btn-lg">
-            <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i> Finlizar Compra</a>
+            Checkout <span class="fa fa-play"></span></a>
 
         <div style="float:right">
             <form action="{{ url('/emptyCart') }}" method="POST">

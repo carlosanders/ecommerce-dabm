@@ -45,6 +45,9 @@ $ git clone https://gitlab.com/dabm-singra/ecommerce.git
 # Após baixar tem que executar o composer update
 # para baixar as dependências do projeto 
 $ composer update
+# ou install para instalar, caso seja a primeira vez
+$ composer install 
+
 ```
 
 ### Iniciando o Git Flow no projeto
@@ -67,7 +70,15 @@ $ sudo chmod -R 777 path_to_project/ecommerce/storage
 $ sudo chmod -R 777 path_to_project/ecommerce/bootstrap/cache
 ```
 
+### Usando o Gulp para otimizar CSS, JS e Libs de Frontend
 ...
+
+Caso não queira instalar o gulp para o projeto baixe a versão full do projeto com todas as dependências já instaladas. Clique em releases do git e baixe a versão full. [Versão Full projeto]
+
+[Versão Full projeto](./releases/v0.7.1-full.zip)
+
+
+[Versão Full projeto]: (./releases/v0.7.1-full.zip)
  
 [migrator]: https://packagist.org/packages/artesaos/migrator
 [github-migrator]: https://github.com/artesaos/migrator

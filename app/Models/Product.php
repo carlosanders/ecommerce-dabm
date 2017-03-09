@@ -28,6 +28,8 @@ class Product extends Model
      * Get the name product owns the product
      * One To Many (Inverse)
      * Permite que um produto acesse seu nome de produto
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function nameProduct()
     {
@@ -40,9 +42,22 @@ class Product extends Model
      * Relcionamento "one-to-many" usado para definir
      * que o Model Product possui qualquer qtd
      * do Model Images
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function images()
     {
         return $this->hasMany('\App\Models\Image');
     }
+
+    /**
+     * Get the stock record associated with the product.
+     * Um model User pode estar associado a um model Stock
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function stock()
+    {
+        return $this->hasOne('App\Models\Stock');
+    }
+
 }

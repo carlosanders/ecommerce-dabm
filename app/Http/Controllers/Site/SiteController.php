@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\PDU;
 use App\Models\Product;
 use App\Repositories\Contracts\ProductRepositoryInterface;
 use Illuminate\Support\Facades\Auth;
@@ -29,6 +30,7 @@ class SiteController extends Controller
     //public function index(ProductRepositoryEloquent $repository)
     public function index()
     {
+        \Debugbar::warning('url: ');
         $categories = Category::all();
         //$products = Product::where('pg_init', 1)
         //->orderBy('title', 'description')
@@ -129,13 +131,15 @@ class SiteController extends Controller
 
     public function getCheckout()
     {
-        if (!Auth::check()) {
-            //return redirect()->route('login');
+//        if (!Auth::check()) {
+//            //return redirect()->route('login');
+//
+//            session()->flash('not_logged', ' Já está cadastrado?');
+//        }
 
-            session()->flash('not_logged', ' Já está cadastrado?');
-        }
+        $listaPDU = PDU::all();
 
-        return view('site.checkout');
+        return view('site.checkout')->with(compact('listaPDU'));
     }
 
 //    public function getAddToCart(Request $request, $id)

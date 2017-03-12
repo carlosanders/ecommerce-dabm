@@ -27,7 +27,7 @@ Route::group(['prefix' => 'user'], function () {
 });
 
 Route::name('checkout')
-    //->middleware('auth')
+    ->middleware('auth')
     ->get('checkout', 'Site\SiteController@getCheckout');
 
 Route::get('/', 'Site\SiteController@index');

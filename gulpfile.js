@@ -37,6 +37,7 @@ elixir(function (mix) {
 
   mix.scripts([
     src + '/js/ecommerce/steps.js',
+    src + '/js/ecommerce/site.js',
   ], 'public/common/js/loja-all.js');
 
 

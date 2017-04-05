@@ -14,7 +14,7 @@
                 @include('layouts.partials.contentheader')
             @show
             <!-- Main content -->
-            <section class="content">
+            <section class="content" style="background-color: #00acd6">
                 <!-- Your Page Content Here -->
                 @section('main-content')
                     <div class="row">
@@ -49,8 +49,7 @@
 @show
 
 <!-- Arquivos extras de JS -->
-{{--@yield('extra-js')--}}
-@stack('scripts')
+@yield('extra-js')
 
 </body>
 </html>

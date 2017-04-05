@@ -14,12 +14,8 @@
         <b>e-DAbM</b></a>
 @endsection
 
-@section('category')
+@section('main-content')
+    @include('site.partials.thumbnail-name')
 @endsection
 
-@section('produto')
-    @include('site.partials.thumbnail')
-@endsection
 
-@section('carousel')
-@show

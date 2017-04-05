@@ -24,6 +24,9 @@ Route::group(['prefix' => 'user'], function () {
     Route::group(['middleware' => 'auth'], function () {
         Route::get('/home', 'HomeController@index');
     });
+
+    Route::name('salvar.pedido')
+        ->post('saveOrder', 'OrderController@saveOrder');
 });
 
 Route::name('checkout')
@@ -31,7 +34,9 @@ Route::name('checkout')
     ->get('checkout', 'Site\SiteController@getCheckout');
 
 Route::get('/', 'Site\SiteController@index');
+Route::get('/names', 'Site\SiteController@indexNamesProducts');
 Route::get('all', 'Site\SiteController@getProductsAll');
+//Route::get('viewproduct/{id}', 'Site\SiteController@getProduct');
 
 //rotas para gerir carrinho na sessao
 Route::resource('shop', 'Site\SiteController', ['only' => ['index', 'show']]);

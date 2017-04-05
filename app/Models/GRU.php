@@ -38,6 +38,8 @@ class GRU extends Model
         'competencia',
         'vencimento',
         'cnpj_cpf',
+        'nome_contribuinte',
+        'valorTotal',
 
     ];
 

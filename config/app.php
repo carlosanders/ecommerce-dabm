@@ -181,7 +181,8 @@ return [
          * Package Service Providers...
         */
         //Acacha AdminLTE template provider
-        Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
+        //Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
+        App\Support\AdminLTE\AdminLTEServiceProvider::class,
         //laravel-module
         Nwidart\Modules\LaravelModulesServiceProvider::class,
         //Suporte a Oracle no Laravel

@@ -107,7 +107,7 @@
                 <td class="small-caps table-bg"
                     style="text-align: right">Total
                 </td>
-                <td class="table-bg">$ {{ Cart::total() }}</td>
+                <td class="table-bg">$ {{ Cart::total() }}$ {{ Cart::total() }}</td>
                 <td class="column-spacer"></td>
                 <td></td>
             </tr>

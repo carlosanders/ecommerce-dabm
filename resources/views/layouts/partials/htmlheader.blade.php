@@ -7,6 +7,9 @@
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('/common/css/site-all.css') }}" rel="stylesheet">
+    <link href="{{ asset('/vendor/easyui/themes/default/easyui.css') }}" rel="stylesheet">
+    <link href="{{ asset('/vendor/easyui/themes/icon.css') }}" rel="stylesheet">
+    <link href="{{ asset('/vendor/easyui/locale/easyui-lang-pt_BR.js') }}" rel="stylesheet">
 
     {{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">--}}
     {{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">--}}

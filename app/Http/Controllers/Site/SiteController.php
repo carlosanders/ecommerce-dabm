@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
-use App\Models\Product;
+use App\Models\PDU;
 use App\Repositories\Contracts\ProductRepositoryInterface;
-use Illuminate\Support\Facades\Auth;
+use App\Repositories\NameProductsRepositoryEloquent;
 
 class SiteController extends Controller
 {
@@ -29,7 +29,8 @@ class SiteController extends Controller
     //public function index(ProductRepositoryEloquent $repository)
     public function index()
     {
-        $categories = Category::all();
+        //\Debugbar::warning('url: ');
+        //$categories = Category::all();
         //$products = Product::where('pg_init', 1)
         //->orderBy('title', 'description')
         //->take(10)
@@ -64,6 +65,26 @@ class SiteController extends Controller
 //        dd(1);
 
         return view('site.site')->with(compact('categories', 'products'));
+    }
+
+    public function indexNamesProducts(NameProductsRepositoryEloquent $repository)
+    {
+        //$categories = Category::all();
+
+        //faz um relacionamento com nomeProduto e Foto
+        $stmt = $repository->with(['products']);
+        //aplica a condicao depois que fizer o relacionamento
+//        $products = $stmt->findWhere([
+//            'pg_init' => '1',//page initial active
+//        ]);
+
+        $products = $stmt->paginate();
+
+        $links = $products->links();
+
+        //dd($products->links());
+
+        return view('site.site-name')->with(compact('products', 'links'));
     }
 
     public function getProductsAll()
@@ -127,15 +148,35 @@ class SiteController extends Controller
         ]);
     }
 
+    /**
+     * Display the specified resource.
+     *
+     * @param  string $id
+     * @return \Illuminate\Http\Response
+     */
+    public function getProduct($id = 0)
+    {
+        dd($id);
+        //faz um relacionamento com nomeProduto e Foto
+        //$stmt = $this->repository->with(['products']);
+
+        //$product = $stmt->findByField('id', $id);
+        //dd($product);
+
+        return view('site.productsall')->with(compact('products'));
+    }
+
     public function getCheckout()
     {
-        if (!Auth::check()) {
-            //return redirect()->route('login');
+//        if (!Auth::check()) {
+//            //return redirect()->route('login');
+//
+//            session()->flash('not_logged', ' Já está cadastrado?');
+//        }
 
-            session()->flash('not_logged', ' Já está cadastrado?');
-        }
+        $listaPDU = PDU::all();
 
-        return view('site.checkout');
+        return view('site.checkout')->with(compact('listaPDU'));
     }
 
 //    public function getAddToCart(Request $request, $id)

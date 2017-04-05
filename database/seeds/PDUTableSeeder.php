@@ -24,7 +24,12 @@ class PDUTableSeeder extends Seeder
                 'name' => 'PDU do 1DN',
                 'slug' => str_slug('PDU do 1DN'),
                 'description' => 'PDU do Comando do Primeiro Distrito Naval',
-            ],
+            ], //1
+            [
+                'name' => 'PDU da BAMRJ',
+                'slug' => str_slug('PDU BAMRJ'),
+                'description' => 'PDU da Base de Abastecimento do RJ',
+            ], //2
         ));
 
         // Exibe uma informação no console durante o processo de seed
